@@ -2,11 +2,34 @@
 <html>
 <head>
     <script>
-        const path = window.location.pathname.split("/").pop();
-        // This is where you can put a temporary link for now
-        const destination = "https://citizencharter-thasangmun.com/" + path;
-        window.location.href = destination;
-    </script>
+    const path = window.location.pathname.split("/").pop();
+</script>
+
+<div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    background:#f5f5f5;
+">
+    <div>
+        <h2>⚠️ System Under Maintenance</h2>
+        <p>
+            The house number system is currently under maintenance.<br/>
+            Please try again later.
+        </p>
+
+        <p style="margin-top:10px; font-size:14px; color:#555;">
+            House No: <strong id="houseNo"></strong>
+        </p>
+    </div>
+</div>
+
+<script>
+    document.getElementById("houseNo").innerText = path || "N/A";
+</script>
 </head>
 <body>Redirecting...</body>
 </html>
